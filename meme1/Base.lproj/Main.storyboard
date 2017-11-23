@@ -49,10 +49,16 @@
                                     <constraint firstAttribute="width" constant="64" id="wMA-Kd-IId"/>
                                 </constraints>
                                 <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="origemCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kkm-23-bbH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nN-po-TCV">
                                 <rect key="frame" x="155" y="627" width="64" height="30"/>
                                 <state key="normal" title="Fotos"/>
+                                <connections>
+                                    <action selector="origemBiblioteca:" destination="BYZ-38-t0r" eventType="touchUpInside" id="axn-Ma-KvO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbo-KN-Zns">
                                 <rect key="frame" x="260" y="627" width="99" height="30"/>
@@ -82,8 +88,10 @@
                     </view>
                     <connections>
                         <outlet property="Camera" destination="ylm-gU-Fqp" id="nwj-pT-nm2"/>
+                        <outlet property="Compartilhar" destination="hbo-KN-Zns" id="Yoh-dU-nzy"/>
                         <outlet property="Fotos" destination="2nN-po-TCV" id="ihN-D9-NdC"/>
                         <outlet property="camera" destination="v5O-Ge-8hb" id="Hhf-hQ-0eS"/>
+                        <outlet property="imagePickerView" destination="JhV-dJ-hv9" id="vRE-Zy-hGe"/>
                         <outlet property="textoAbaixo" destination="gt6-mV-W6q" id="nyk-bk-lVa"/>
                         <outlet property="textoAcima" destination="hp0-wb-bU9" id="PUi-dx-vTN"/>
                     </connections>

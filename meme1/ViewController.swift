@@ -19,13 +19,31 @@ UINavigationControllerDelegate {
     @IBOutlet weak var textoAbaixo: UITextField!
     @IBOutlet weak var Camera: UIButton!
     @IBOutlet weak var Fotos: UIButton!
+    @IBOutlet weak var Compartilhar: UIButton!
+    @IBOutlet weak var imagePickerView: UIImageView!
     
     var attributes = [NSAttributedStringKey : Any]()
     let textoAcimaDelegate = MemeTextFieldDelegate()
     let textoAbaixoDelegate = MemeTextFieldDelegate()
+    var meme = Meme()
     
     
-     var meme = Meme()
+    @IBAction func origemCamera(_ sender: Any) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        if UIImagePickerController.isSourceTypeAvailable(.camera)
+        {
+            imagePicker.sourceType = .camera
+            present(imagePicker, animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func origemBiblioteca(_ sender: Any) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = .photoLibrary
+        present(imagePicker, animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +61,7 @@ UINavigationControllerDelegate {
     func inicializaBarra() {
         Camera.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
         Fotos.isEnabled = UIImagePickerController.isSourceTypeAvailable(.photoLibrary)
+        Compartilhar.isEnabled=false
     }
     
     
@@ -62,8 +81,18 @@ UINavigationControllerDelegate {
         element.isHidden = true
     }
     
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let image = info[UIImagePickerControllerOriginalImage]
+            as! UIImage
+        imagePickerView.image=image
+        picker.dismiss(animated: true, completion: nil)
+    }
     
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
     
+
     
 
 }
