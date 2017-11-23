@@ -14,9 +14,13 @@ class MemeTextFieldDelegate: NSObject, UITextFieldDelegate {
     var isDefaultText: Bool = true
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        if isDefaultText {
+       /* if isDefaultText {
             textField.text = ""
-            isDefaultText = false
+            isDefaultText = false*/
+            if (textField.text=="SUPERIOR"){
+                textField.text=""
+            }else if(textField.text=="INFERIOR"){
+                textField.text=""
         }
     }
     
