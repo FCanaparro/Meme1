@@ -34,8 +34,10 @@ UINavigationControllerDelegate,UITextFieldDelegate {
     }
     
     @IBAction func clickInferior(_ sender: Any) {
+        Compartilhar.isEnabled=true
     }
     @IBAction func clickSuperior(_ sender: Any) {
+    Compartilhar.isEnabled=true
     }
     
     @IBAction func origemBiblioteca(_ sender: Any) {
@@ -76,7 +78,34 @@ UINavigationControllerDelegate,UITextFieldDelegate {
         Compartilhar.isEnabled=false
     }
     
+    @IBAction func compartilhar(_ sender: Any) {
+        
+        
+        let ac = UIActivityViewController(activityItems: [generateMemedImage()], applicationActivities: nil)
+        ac.completionWithItemsHandler = { activity, success, items, error in
+            if success {
+                self.save()
+            }
+        }
+        present(ac, animated: true, completion: nil)
+    }
     
+    func save() {
+        // Create the meme
+        let meme = Meme(textTop: textoAcima.text!, textBottom: textoAbaixo.text!, imageOriginal: imagePickerView.image!)
+    }
+
+    
+    func generateMemedImage() -> UIImage {
+        
+        // Render view to an image
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
+        let memedImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        return memedImage
+    }
     
     
     func InicializaTexto(element: UITextField, text: String, delegate: UITextFieldDelegate) {
