@@ -19,22 +19,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vbN-S1-fXq">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vbN-S1-fXq">
                                 <rect key="frame" x="0.0" y="0.0" width="376" height="44"/>
                                 <items>
-                                    <barButtonItem title="Item" style="plain" id="49J-jZ-CO0">
+                                    <barButtonItem title="Share" style="plain" id="49J-jZ-CO0">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" id="hbo-KN-Zns">
-                                            <rect key="frame" x="16" y="0.0" width="158" height="44"/>
+                                            <rect key="frame" x="16" y="0.0" width="90" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="kkkk" image="JCZNV"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <state key="normal" title="Compartilhar">
+                                                <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
                                             <connections>
                                                 <action selector="compartilhar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mG7-6o-rAZ"/>
                                             </connections>
                                         </button>
                                     </barButtonItem>
-                                    <barButtonItem style="plain" id="AeE-tz-2Ai">
+                                    <barButtonItem title="Cancel" style="plain" id="AeE-tz-2Ai">
                                         <button key="customView" opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VSF-WR-yES">
-                                            <rect key="frame" x="299" y="7" width="61" height="30"/>
+                                            <rect key="frame" x="280" y="7" width="80" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Cancelar"/>
                                         </button>
@@ -72,7 +75,7 @@
                                 <items>
                                     <barButtonItem style="plain" id="nxH-Vm-jHk">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2nN-po-TCV">
-                                            <rect key="frame" x="16" y="7" width="107" height="30"/>
+                                            <rect key="frame" x="16" y="7" width="80" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                                             <state key="normal" title="Fotos"/>
                                             <connections>
@@ -82,7 +85,7 @@
                                     </barButtonItem>
                                     <barButtonItem style="plain" id="lo8-7i-j9x">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ylm-gU-Fqp">
-                                            <rect key="frame" x="199" y="0.0" width="160" height="44"/>
+                                            <rect key="frame" x="279" y="0.0" width="80" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                                             <state key="normal" title="Camera"/>
                                             <connections>
@@ -123,7 +126,4 @@
             <point key="canvasLocation" x="32.799999999999997" y="33.733133433283363"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="JCZNV" width="120" height="173"/>
-    </resources>
 </document>
