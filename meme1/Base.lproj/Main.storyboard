@@ -19,31 +19,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vbN-S1-fXq">
-                                <rect key="frame" x="0.0" y="12" width="376" height="44"/>
-                                <items>
-                                    <barButtonItem title="Share" style="plain" id="49J-jZ-CO0">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" id="hbo-KN-Zns">
-                                            <rect key="frame" x="16" y="0.0" width="90" height="44"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <state key="normal" title="Compartilhar">
-                                                <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="compartilhar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mG7-6o-rAZ"/>
-                                            </connections>
-                                        </button>
-                                    </barButtonItem>
-                                    <barButtonItem title="Cancel" style="plain" id="AeE-tz-2Ai">
-                                        <button key="customView" opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VSF-WR-yES">
-                                            <rect key="frame" x="280" y="7" width="80" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Cancelar"/>
-                                        </button>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
+                            <imageView opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JhV-dJ-hv9">
+                                <rect key="frame" x="0.0" y="65" width="375" height="560"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="560" id="BQV-qf-0t4"/>
+                                </constraints>
+                            </imageView>
                             <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gt6-mV-W6q">
                                 <rect key="frame" x="183" y="462" width="8" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -95,20 +76,42 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <imageView opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JhV-dJ-hv9">
-                                <rect key="frame" x="0.0" y="56" width="375" height="569"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="569" id="BQV-qf-0t4"/>
-                                </constraints>
-                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vbN-S1-fXq">
+                                <rect key="frame" x="0.0" y="21" width="376" height="44"/>
+                                <items>
+                                    <barButtonItem title="Share" style="plain" id="49J-jZ-CO0">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" id="hbo-KN-Zns">
+                                            <rect key="frame" x="16" y="7" width="90" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <state key="normal" title="Compartilhar">
+                                                <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="compartilhar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mG7-6o-rAZ"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem title="Cancel" style="plain" id="AeE-tz-2Ai">
+                                        <button key="customView" opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VSF-WR-yES">
+                                            <rect key="frame" x="299" y="7" width="61" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Cancelar"/>
+                                            <connections>
+                                                <action selector="clickCancelar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qIk-Lk-09B"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="vbN-S1-fXq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-375" id="3Qc-KB-VVm"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="vbN-S1-fXq" secondAttribute="bottom" constant="-36" id="45f-2K-0ON"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="vbN-S1-fXq" secondAttribute="bottom" constant="-45" id="45f-2K-0ON"/>
                             <constraint firstItem="JhV-dJ-hv9" firstAttribute="leading" secondItem="rHu-zB-U1C" secondAttribute="leading" id="CB8-7l-Ycu"/>
                             <constraint firstAttribute="trailing" secondItem="rHu-zB-U1C" secondAttribute="trailing" id="Emc-QH-dcH"/>
-                            <constraint firstItem="hp0-wb-bU9" firstAttribute="top" secondItem="vbN-S1-fXq" secondAttribute="bottom" constant="55" id="L95-TG-D3B"/>
+                            <constraint firstItem="hp0-wb-bU9" firstAttribute="top" secondItem="vbN-S1-fXq" secondAttribute="bottom" constant="46" id="L95-TG-D3B"/>
                             <constraint firstItem="hp0-wb-bU9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W4X-JC-Cle"/>
                             <constraint firstAttribute="bottom" secondItem="gt6-mV-W6q" secondAttribute="bottom" constant="175" id="WeS-PY-nYw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JhV-dJ-hv9" secondAttribute="bottom" constant="42" id="eh1-ZD-q2R"/>

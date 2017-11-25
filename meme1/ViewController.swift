@@ -33,6 +33,14 @@ UINavigationControllerDelegate,UITextFieldDelegate {
         }
     }
     
+    @IBAction func clickCancelar(_ sender: Any) {
+        imagePickerView.image=nil
+        InicializaTexto(element: textoAcima, text: meme.textTop, delegate: textoAcimaDelegate)
+        InicializaTexto(element: textoAbaixo, text: meme.textBottom, delegate: textoAbaixoDelegate)
+        
+        
+        
+    }
     @IBAction func clickInferior(_ sender: Any) {
         Compartilhar.isEnabled=true
     }
@@ -94,6 +102,7 @@ UINavigationControllerDelegate,UITextFieldDelegate {
         // Create the meme
         let meme = Meme(textTop: textoAcima.text!, textBottom: textoAbaixo.text!, imageOriginal: imagePickerView.image!)
     }
+    
 
     
     func generateMemedImage() -> UIImage {
