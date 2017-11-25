@@ -117,7 +117,7 @@ UINavigationControllerDelegate,UITextFieldDelegate {
             ]
         element.text = text
         element.delegate = delegate
-        //lement.defaultTextAttributes =
+        //element.defaultTextAttributes =
         element.textAlignment = NSTextAlignment.center
         element.isHidden = false
     }
