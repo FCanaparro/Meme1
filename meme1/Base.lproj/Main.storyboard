@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vbN-S1-fXq">
-                                <rect key="frame" x="0.0" y="0.0" width="376" height="44"/>
+                                <rect key="frame" x="0.0" y="12" width="376" height="44"/>
                                 <items>
                                     <barButtonItem title="Share" style="plain" id="49J-jZ-CO0">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" id="hbo-KN-Zns">
@@ -44,9 +44,12 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <textField opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gt6-mV-W6q">
+                            <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gt6-mV-W6q">
                                 <rect key="frame" x="183" y="462" width="8" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="t2F-gD-47A"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
@@ -54,9 +57,12 @@
                                     <action selector="clickInferior:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="LEa-Sy-W4y"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hp0-wb-bU9">
-                                <rect key="frame" x="183" y="111" width="8" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="239" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hp0-wb-bU9">
+                                <rect key="frame" x="184" y="111" width="8" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0lI-sD-w6c"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
@@ -64,12 +70,6 @@
                                     <action selector="clickSuperior:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="4SV-ms-2Te"/>
                                 </connections>
                             </textField>
-                            <imageView opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JhV-dJ-hv9">
-                                <rect key="frame" x="0.0" y="44" width="375" height="581"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="581" id="BQV-qf-0t4"/>
-                                </constraints>
-                            </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rHu-zB-U1C">
                                 <rect key="frame" x="0.0" y="624" width="375" height="44"/>
                                 <items>
@@ -95,18 +95,28 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <imageView opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JhV-dJ-hv9">
+                                <rect key="frame" x="0.0" y="56" width="375" height="569"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="569" id="BQV-qf-0t4"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="JhV-dJ-hv9" firstAttribute="top" secondItem="vbN-S1-fXq" secondAttribute="bottom" id="1KM-7Y-H5N"/>
-                            <constraint firstItem="JhV-dJ-hv9" firstAttribute="centerX" secondItem="vbN-S1-fXq" secondAttribute="centerX" id="1yr-Z5-2kl"/>
+                            <constraint firstItem="vbN-S1-fXq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-375" id="3Qc-KB-VVm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="vbN-S1-fXq" secondAttribute="bottom" constant="-36" id="45f-2K-0ON"/>
                             <constraint firstItem="JhV-dJ-hv9" firstAttribute="leading" secondItem="rHu-zB-U1C" secondAttribute="leading" id="CB8-7l-Ycu"/>
                             <constraint firstAttribute="trailing" secondItem="rHu-zB-U1C" secondAttribute="trailing" id="Emc-QH-dcH"/>
-                            <constraint firstItem="JhV-dJ-hv9" firstAttribute="leading" secondItem="vbN-S1-fXq" secondAttribute="leading" id="GGU-zQ-c9T"/>
-                            <constraint firstItem="rHu-zB-U1C" firstAttribute="centerX" secondItem="hp0-wb-bU9" secondAttribute="centerX" id="NOH-ts-3y6"/>
+                            <constraint firstItem="hp0-wb-bU9" firstAttribute="top" secondItem="vbN-S1-fXq" secondAttribute="bottom" constant="55" id="L95-TG-D3B"/>
+                            <constraint firstItem="hp0-wb-bU9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W4X-JC-Cle"/>
+                            <constraint firstAttribute="bottom" secondItem="gt6-mV-W6q" secondAttribute="bottom" constant="175" id="WeS-PY-nYw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JhV-dJ-hv9" secondAttribute="bottom" constant="42" id="eh1-ZD-q2R"/>
+                            <constraint firstItem="vbN-S1-fXq" firstAttribute="bottom" secondItem="JhV-dJ-hv9" secondAttribute="top" id="f8U-IE-lX4"/>
                             <constraint firstItem="JhV-dJ-hv9" firstAttribute="trailing" secondItem="rHu-zB-U1C" secondAttribute="trailing" id="fpj-Ur-WJb"/>
+                            <constraint firstItem="vbN-S1-fXq" firstAttribute="centerX" secondItem="JhV-dJ-hv9" secondAttribute="centerX" id="g0b-dH-CHt"/>
                             <constraint firstItem="rHu-zB-U1C" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jGp-rN-4Ir"/>
+                            <constraint firstItem="vbN-S1-fXq" firstAttribute="leading" secondItem="JhV-dJ-hv9" secondAttribute="leading" id="lCE-BY-vKw"/>
                             <constraint firstItem="rHu-zB-U1C" firstAttribute="centerX" secondItem="gt6-mV-W6q" secondAttribute="centerX" id="oix-Bc-BJV"/>
                             <constraint firstAttribute="bottomMargin" secondItem="rHu-zB-U1C" secondAttribute="bottom" constant="-1" id="uea-Q8-zWs"/>
                         </constraints>
