@@ -118,15 +118,15 @@ UINavigationControllerDelegate,UITextFieldDelegate {
     
     
     func InicializaTexto(element: UITextField, text: String, delegate: UITextFieldDelegate) {
-        attributes = [
-            .strokeColor: UIColor.black,
-            .foregroundColor: UIColor.white,
-            .font: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
-            .strokeWidth: -2.6,
+       let attributes: [String:Any]=[
+        NSAttributedStringKey.strokeColor.rawValue: UIColor.black,
+        NSAttributedStringKey.foregroundColor.rawValue: UIColor.white,
+        NSAttributedStringKey.font.rawValue: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
+        NSAttributedStringKey.strokeWidth.rawValue: 4,
             ]
         element.text = text
         element.delegate = delegate
-        //element.defaultTextAttributes =
+        element.defaultTextAttributes = attributes
         element.textAlignment = NSTextAlignment.center
         element.isHidden = false
     }
