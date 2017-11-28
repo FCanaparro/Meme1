@@ -82,7 +82,7 @@
                                 <items>
                                     <barButtonItem title="Share" style="plain" id="49J-jZ-CO0">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" id="hbo-KN-Zns">
-                                            <rect key="frame" x="16" y="8" width="90" height="30"/>
+                                            <rect key="frame" x="16" y="7.5" width="90" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <state key="normal" title="Compartilhar">
