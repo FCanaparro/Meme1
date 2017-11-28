@@ -12,6 +12,7 @@ struct Meme {
     var textTop: String = "SUPERIOR"
     var textBottom: String = "INFERIOR"
     var imageOriginal: UIImage?
+    var memedImage : UIImage?
 }
 
 

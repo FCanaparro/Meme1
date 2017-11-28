@@ -78,11 +78,11 @@
                                 </items>
                             </toolbar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vbN-S1-fXq">
-                                <rect key="frame" x="0.0" y="21" width="376" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="376" height="45"/>
                                 <items>
                                     <barButtonItem title="Share" style="plain" id="49J-jZ-CO0">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" id="hbo-KN-Zns">
-                                            <rect key="frame" x="16" y="7" width="90" height="30"/>
+                                            <rect key="frame" x="16" y="8" width="90" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <state key="normal" title="Compartilhar">
@@ -95,7 +95,7 @@
                                     </barButtonItem>
                                     <barButtonItem title="Cancel" style="plain" id="AeE-tz-2Ai">
                                         <button key="customView" opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VSF-WR-yES">
-                                            <rect key="frame" x="299" y="7" width="61" height="30"/>
+                                            <rect key="frame" x="299" y="7.5" width="61" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Cancelar"/>
                                             <connections>
@@ -114,6 +114,7 @@
                             <constraint firstAttribute="trailing" secondItem="rHu-zB-U1C" secondAttribute="trailing" id="Emc-QH-dcH"/>
                             <constraint firstItem="JhV-dJ-hv9" firstAttribute="centerX" secondItem="rHu-zB-U1C" secondAttribute="centerX" id="K2y-2A-tsl"/>
                             <constraint firstItem="hp0-wb-bU9" firstAttribute="top" secondItem="vbN-S1-fXq" secondAttribute="bottom" constant="46" id="L95-TG-D3B"/>
+                            <constraint firstItem="vbN-S1-fXq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="N9r-rT-UEI"/>
                             <constraint firstItem="hp0-wb-bU9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W4X-JC-Cle"/>
                             <constraint firstItem="rHu-zB-U1C" firstAttribute="firstBaseline" secondItem="gt6-mV-W6q" secondAttribute="baseline" constant="43" id="b1g-ni-0tp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JhV-dJ-hv9" secondAttribute="bottom" constant="42" id="eh1-ZD-q2R"/>
@@ -121,11 +122,14 @@
                             <constraint firstItem="JhV-dJ-hv9" firstAttribute="trailing" secondItem="rHu-zB-U1C" secondAttribute="trailing" id="fpj-Ur-WJb"/>
                             <constraint firstItem="vbN-S1-fXq" firstAttribute="centerX" secondItem="JhV-dJ-hv9" secondAttribute="centerX" id="g0b-dH-CHt"/>
                             <constraint firstItem="rHu-zB-U1C" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jGp-rN-4Ir"/>
+                            <constraint firstItem="JhV-dJ-hv9" firstAttribute="top" secondItem="vbN-S1-fXq" secondAttribute="bottom" id="jWd-ay-gnt"/>
                             <constraint firstItem="vbN-S1-fXq" firstAttribute="leading" secondItem="JhV-dJ-hv9" secondAttribute="trailing" constant="-375" id="k5L-ZO-9MQ"/>
                             <constraint firstItem="vbN-S1-fXq" firstAttribute="leading" secondItem="JhV-dJ-hv9" secondAttribute="leading" id="lCE-BY-vKw"/>
                             <constraint firstItem="rHu-zB-U1C" firstAttribute="centerX" secondItem="gt6-mV-W6q" secondAttribute="centerX" id="oix-Bc-BJV"/>
+                            <constraint firstItem="vbN-S1-fXq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rCZ-LN-4dx"/>
                             <constraint firstAttribute="bottomMargin" secondItem="rHu-zB-U1C" secondAttribute="bottom" constant="-1" id="uea-Q8-zWs"/>
                             <constraint firstItem="JhV-dJ-hv9" firstAttribute="leading" secondItem="rHu-zB-U1C" secondAttribute="trailing" constant="-375" id="x6a-bE-ysv"/>
+                            <constraint firstAttribute="trailing" secondItem="vbN-S1-fXq" secondAttribute="trailing" id="xAr-px-R0I"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

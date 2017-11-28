@@ -39,13 +39,12 @@ UINavigationControllerDelegate,UITextFieldDelegate {
         InicializaTexto(element: textoAbaixo, text: meme.textBottom, delegate: textoAbaixoDelegate)
         
         
-        
     }
     @IBAction func clickInferior(_ sender: Any) {
         Compartilhar.isEnabled=true
     }
     @IBAction func clickSuperior(_ sender: Any) {
-    Compartilhar.isEnabled=true
+        Compartilhar.isEnabled=true
     }
     
     @IBAction func origemBiblioteca(_ sender: Any) {
@@ -98,12 +97,6 @@ UINavigationControllerDelegate,UITextFieldDelegate {
         present(ac, animated: true, completion: nil)
     }
     
-    func save() {
-        // Create the meme
-        let meme = Meme(textTop: textoAcima.text!, textBottom: textoAbaixo.text!, imageOriginal: imagePickerView.image!)
-    }
-    
-
     
     func generateMemedImage() -> UIImage {
         
@@ -115,6 +108,11 @@ UINavigationControllerDelegate,UITextFieldDelegate {
         
         return memedImage
     }
+    func save() {
+        // Create the meme
+        let memedImage = generateMemedImage()
+        let meme = Meme(textTop: textoAcima.text!, textBottom: textoAbaixo.text!, imageOriginal: imagePickerView.image!, memedImage: memedImage)
+    }
     
     
     func InicializaTexto(element: UITextField, text: String, delegate: UITextFieldDelegate) {
@@ -122,7 +120,7 @@ UINavigationControllerDelegate,UITextFieldDelegate {
         NSAttributedStringKey.strokeColor.rawValue: UIColor.black,
         NSAttributedStringKey.foregroundColor.rawValue: UIColor.white,
         NSAttributedStringKey.font.rawValue: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
-        NSAttributedStringKey.strokeWidth.rawValue: -2,
+        NSAttributedStringKey.strokeWidth.rawValue: -2.9,
             ]
         element.text = text
         element.delegate = delegate
@@ -145,9 +143,18 @@ UINavigationControllerDelegate,UITextFieldDelegate {
 
     
     @objc func keyboardWillShow(_ notification:Notification) {
+        if textoAbaixo.isFirstResponder {
+            view.frame.origin.y = -getKeyboardHeight(notification)
+        }
         
-        view.frame.origin.y = 0 - getKeyboardHeight(notification)
     }
+    func keyboardWillHide(notification: NSNotification) -> Void {
+        
+        if textoAcima.isFirstResponder {
+            view.frame.origin.y = 0
+        }
+    }
+    
     
     @objc func keyboardWillHide(_ notification:Notification) {
         
@@ -155,23 +162,19 @@ UINavigationControllerDelegate,UITextFieldDelegate {
     }
     
     func getKeyboardHeight(_ notification:Notification) -> CGFloat {
-        
         let userInfo = notification.userInfo
         let keyboardSize = userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue // of CGRect
         return keyboardSize.cgRectValue.height
     }
     
     func subscribeToKeyboardNotifications() {
-        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: .UIKeyboardWillShow, object: nil)
-        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: .UIKeyboardWillHide, object: nil)
     }
     
     func unsubscribeFromKeyboardNotifications() {
-        
         NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillShow, object: nil)
-        
+        NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillHide, object: nil)
     }
     
     
