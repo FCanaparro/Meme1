@@ -23,16 +23,6 @@ UINavigationControllerDelegate,UITextFieldDelegate {
     let textoAbaixoDelegate = MemeTextFieldDelegate()
     var meme = Meme()
     
-    @IBAction func origemCamera(_ sender: Any) {
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        if UIImagePickerController.isSourceTypeAvailable(.camera)
-        {
-            imagePicker.sourceType = .camera
-            present(imagePicker, animated: true, completion: nil)
-        }
-    }
-    
     @IBAction func clickCancelar(_ sender: Any) {
         imagePickerView.image=nil
         InicializaTexto(element: textoAcima, text: meme.textTop, delegate: textoAcimaDelegate)
@@ -47,12 +37,21 @@ UINavigationControllerDelegate,UITextFieldDelegate {
         Compartilhar.isEnabled=true
     }
     
-    @IBAction func origemBiblioteca(_ sender: Any) {
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = .photoLibrary
-        present(imagePicker, animated: true, completion: nil)
+    
+    func selecionaOrigem(sourceType: UIImagePickerControllerSourceType) {
+        let controller = UIImagePickerController()
+        controller.delegate = self
+        controller.sourceType = sourceType
+        present(controller, animated: true, completion: nil)
     }
+    
+    @IBAction func origemCamera(_ sender: Any) {
+        selecionaOrigem(sourceType:(.photoLibrary))
+    }
+    
+    @IBAction func origemBiblioteca(_ sender: Any) {
+        selecionaOrigem(sourceType:(.camera))
+        }
     
     override func viewDidLoad() {
         super.viewDidLoad()
